@@ -33,8 +33,8 @@ export default class RideScreen extends Component {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
 
     this.setState({
-      /*status === "granted" is true when user has granted permission
-          status === "granted" is false when user has not granted the permission
+      /*status === "granted" es verdadero cuando el usuario concede el permiso.
+          status === "granted" es falso cuando el usuario no concede el permiso.
         */
       hasCameraPermissions: status === "granted",
       domState: "scanner",
@@ -64,8 +64,8 @@ export default class RideScreen extends Component {
       <View style={styles.container}>
         <View style={styles.upperContainer}>
           <Image source={appIcon} style={styles.appIcon} />
-          <Text style={styles.title}>e-ride</Text>
-          <Text style={styles.subtitle}>A Eco-Friendly Ride</Text>
+          <Text style={styles.title}>Travesía digital</Text>
+          <Text style={styles.subtitle}>Un viaje ecológico</Text>
         </View>
         <View style={styles.lowerContainer}>
           <View style={styles.textinputContainer}>
@@ -80,7 +80,7 @@ export default class RideScreen extends Component {
 
             <TextInput
               style={styles.textinput}
-              placeholder={"Bicycle Id"}
+              placeholder={"id de la bicileta"}
               placeholderTextColor={"#FFFFFF"}
               value={bikeId}
             />
@@ -94,7 +94,7 @@ export default class RideScreen extends Component {
              // onPress=() => this.getCameraPermissions()
 
             >
-              <Text style={styles.scanbuttonText}>Scan</Text>
+              <Text style={styles.scanbuttonText}>Escanear</Text>
             </TouchableOpacity>
           </View>
         </View>
