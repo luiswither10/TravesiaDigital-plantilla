@@ -14,7 +14,7 @@ import { BarCodeScanner } from "expo-barcode-scanner";
 //bgImage=require("backgroun2.png");
 //const bgImage = "../assets/background2.png";
 //const bgImage = require("background2.png");
-//const bgImage = require("../assets/background2.png");
+const bgImage = require("../assets/background2.png");
 const appIcon = require("../assets/appIcon.png");
 
 export default class RideScreen extends Component {
@@ -88,7 +88,8 @@ export default class RideScreen extends Component {
             <TouchableOpacity
               style={styles.scanbutton}
 
-             // onPress={this.getCameraPermissions()}
+             
+        onPress={this.getCameraPermissions()}
              // onPress={() => this.getCameraPermissions()}
              // onPress={() => this.getCameraPermissions}
              // onPress=() => this.getCameraPermissions()
